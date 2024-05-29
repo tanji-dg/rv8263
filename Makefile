@@ -8,9 +8,6 @@ all: rtc_vl
 modules:
 	$(MAKE) -C $(KDIR) M=$$PWD
 
-CC = $(CROSS_COMPILE)gcc
-CFLAGS = -Wall -Wextra
-
 rtc_vl: rtc_vl.o
 	$(CC) $(CFLAGS) -o rtc_vl rtc_vl.o
 
